@@ -1,0 +1,33 @@
+.navbar {
+    background-color: #5f6db7;
+    /* margin-bottom: 100px; */
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.content {
+    /* margin-top: 100px; */
+    padding: 16px 32px;
+}
+
+.section {
+    margin: 0px 0px 50px 0px;
+    /* background-color: lightgray; */
+}
+
+.section-title {
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.list-classes {
+    overflow: scroll;
+}
+
+.class-card {
+    width: 100%;
+    background-color: lightpink;
+    margin-bottom: 10px;
+}
