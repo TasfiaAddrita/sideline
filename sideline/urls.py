@@ -18,4 +18,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    # path('', 'REPLACE WITH LINK TO HTML PAGE')),
 ]
