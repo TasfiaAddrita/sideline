@@ -4,6 +4,7 @@ from django.views.generic.list import ListView
 from .models import Hobbies
 
 class HobbiesListView(ListView):
+    """Renders a list of all hobbies"""
     model = Hobbies
 
 class HobbiesDetailView(DetailView):
