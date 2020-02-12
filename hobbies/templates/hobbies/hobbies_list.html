@@ -1,5 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>List Hobby View</h1>
-    <button type="button" href="{% url 'hobbies-detail' %}" >Click Me!</button>
+    <button type="button" href="{% url 'hobbies-detail' hobbies.slug %}" >Click Me!</button>
 {% endblock %}
