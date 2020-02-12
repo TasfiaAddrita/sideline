@@ -3,6 +3,10 @@ from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
 from django.utils import timezone
+<<<<<<< HEAD
+=======
+
+>>>>>>> 54a4dc898dc56fdcc7c0cc1ba95528b807805011
 
 
 class Hobbies(models.Model):
