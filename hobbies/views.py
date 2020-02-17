@@ -8,6 +8,12 @@ class HobbiesListView(ListView):
     """Renders a list of all hobbies"""
     model = Hobbies
 
+    def get(self, request):
+        """ Returns a list of wiki pages. """
+        hobbies = self.get_queryset().all()
+        # published_time = self.get_queryset().all()[0].was_published_recently()
+        return render(request, 'list.html', {'hobbies': hobbies})
+
 class HobbiesDetailView(DetailView):
     model = Hobbies
 
