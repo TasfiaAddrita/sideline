@@ -18,7 +18,8 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('hobbies.urls'))
+    path('hobbies/', include('hobbies.urls')),
+    path('accounts/', include('accounts.urls'))
 
     # path('', 'REPLACE WITH LINK TO HTML PAGE')),
 ]
