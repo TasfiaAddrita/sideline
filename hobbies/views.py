@@ -7,7 +7,7 @@ from .models import Hobbies
 class HobbiesListView(ListView):
     """Renders a list of all hobbies"""
     model = Hobbies
-    
+
 
     def get(self, request):
         """ Returns a list of wiki pages. """
@@ -21,9 +21,7 @@ class HobbiesDetailView(DetailView):
     def get(self, request, slug):
         """ Returns a specific hobby page by slug """
         page = self.get_queryset().get(slug__iexact=slug)
-        return render(request, 'hobbies_detail.html', {
-          'hobbies': hobbies
-        })
+        return render(request, 'hobbies_detail.html', {'hobbies': hobbies})
 
 class HobbiesEditView(UpdateView):
     """"""
