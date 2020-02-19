@@ -10,12 +10,12 @@
 .content {
     /* margin-top: 100px; */
     padding: 16px 32px;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .section {
     margin: 0px 0px 50px 0px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
 }
 
 .section-title {
@@ -41,4 +41,25 @@
 
 .class-card p {
     margin: 0;
+}
+
+.quick-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 20px; */
+    /* width: 200px;
+    height: 200px; */
+}
+
+.footer ul {
+    list-style: none;
 }
