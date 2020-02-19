@@ -19,9 +19,8 @@ from django.urls import include, path
 urlpatterns = [
     # Admin site
     path('admin/', admin.site.urls),
-
-    # Sideline app
-    path('', include('hobbies.urls'))
+    path('hobbies/', include('hobbies.urls')),
+    path('accounts/', include('accounts.urls'))
 
     # path('', 'REPLACE WITH LINK TO HTML PAGE')),
 ]
