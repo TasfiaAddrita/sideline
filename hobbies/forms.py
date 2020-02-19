@@ -1,5 +1,5 @@
 from django import forms
-from wiki.models import Hobbies
+from .models import Hobbies
 
 
 class HobbiesForm(forms.ModelForm):
