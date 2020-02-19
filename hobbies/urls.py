@@ -5,5 +5,5 @@ urlpatterns = [
     path('', HobbiesListView.as_view(), name='hobbies-list'),
     path('<str:slug>', HobbiesDetailView.as_view(), name='hobbies-detail'),
     path('<str:slug>/edit', HobbiesEditView.as_view(), name='hobbies-edit'),
-    path('hobbies/add/', HobbiesAddView.as_view(), name='hobbies-add'),
+    path('add/', HobbiesAddView.as_view(), name='hobbies-add'),
 ]
