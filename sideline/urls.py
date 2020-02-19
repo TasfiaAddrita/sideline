@@ -17,7 +17,10 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # Admin site
     path('admin/', admin.site.urls),
+
+    # Sideline app
     path('', include('hobbies.urls'))
 
     # path('', 'REPLACE WITH LINK TO HTML PAGE')),
