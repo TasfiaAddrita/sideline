@@ -2,6 +2,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, View
 from .forms import SignUpForm
+from django.shortcuts import render, redirect, reverse
 
 
 class SignUpView(CreateView):
@@ -10,6 +11,11 @@ class SignUpView(CreateView):
     template_name = 'signup.html'
 
 
+
 class LoginView(View):
-    authentication_form= AuthenticationForm
-    template_name= 'login.html'
+
+    #Render Login view
+    def get(self, request):
+            return render(request, 'login.html', { 'form':  AuthenticationForm })
+
+    
