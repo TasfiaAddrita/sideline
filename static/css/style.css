@@ -1,0 +1,19 @@
+.navbar-brand {
+    margin-right: 100px;
+    font-family: "Gill Sans"
+
+}
+
+
+.full-width-image {
+
+  height: 100vh
+  position: relative;
+
+}
+
+.full-width-image img {
+  width: 100%;
+  height: 100vh;
+
+}
