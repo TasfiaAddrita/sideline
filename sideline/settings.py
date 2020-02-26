@@ -25,7 +25,7 @@ SECRET_KEY = '2*nefv^wk3k4h8wnbqbs-)1t-y^44la+xt-olg1b1=mw2$jjs2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'spd-sideline.herokuapp.com']
 
 
 # Application definition
