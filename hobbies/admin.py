@@ -4,5 +4,5 @@ from hobbies.models import Hobbies
 class HobbiesAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'created', 'modified')
 
-    
-admin.site.register(Hobbies)
+
+admin.site.register(Hobbies, HobbiesAdmin)
