@@ -21,7 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('hobbies.urls')),
-    path('accounts/', include('accounts.urls'))
+
+    # Authentication
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/signup', include('accounts.urls'))
 
     # path('', 'REPLACE WITH LINK TO HTML PAGE')),
 ]
