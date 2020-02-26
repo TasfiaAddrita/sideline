@@ -1,0 +1,30 @@
+.navbar-brand {
+    margin-right: 100px;
+    font-family: "Gill Sans"
+
+}
+
+
+.full-width-image {
+
+  height: 100vh
+  position: relative;
+
+}
+
+.full-width-image img {
+  width: 100%;
+  height: 100vh;
+
+}
+
+.classes-image {
+    height: 20%;
+    width: 30%;
+    float:left;
+    margin-right: 20px
+}
+
+#search-bar{
+    width: 100%
+}
