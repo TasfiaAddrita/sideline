@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'hobbies.apps.HobbiesConfig',
+    # 'hobbies.apps.HobbiesConfig',
+    'hobbies',
     'accounts',
 
 ]
@@ -123,7 +124,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 # sideline app settings
 HOBBY_PAGE_NAME_MAX_LENGTH = 600
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
