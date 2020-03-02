@@ -1,3 +1,7 @@
+body{
+  background-color: #f7f7f7;
+}
+
 .navbar-brand {
     margin-right: 100px;
     font-family: "Gill Sans"
@@ -27,4 +31,36 @@
 
 #search-bar{
     width: 100%
+}
+
+.col-6 {
+  margin-top: 20px
+}
+
+.login-form{ 
+  padding-top: 10%;
+  border: 1px solid rgba(0, 0, 0, .15);
+  text-align: center;
+  padding-bottom: 20%;
+  background-color: white;
+  font-family: "Gill Sans";
+}
+
+form > label{
+  padding-top: 50px
+}
+
+form > button{
+  margin-top: 50px
+}
+
+
+.info-modal{
+  padding-top: 10%;
+
+  text-align: center;
+  padding-bottom: 20%;
+
+  font-family: "Gill Sans";
+
 }
