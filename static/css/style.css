@@ -59,8 +59,19 @@ form > button{
   padding-top: 10%;
 
   text-align: center;
-  padding-bottom: 20%;
-
   font-family: "Gill Sans";
 
 }
+
+.info-modal > h2{
+  padding-bottom: 50px;
+}
+
+.info-modal > h3{
+  padding-bottom: 50px;
+}
+
+.info-modal > img{
+  height: 200px;
+}
+
