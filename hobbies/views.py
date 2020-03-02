@@ -55,3 +55,8 @@ class HobbiesAddView(CreateView):
 def IndexView(request):
     template_name = "index.html"
     return render(request, template_name)
+
+# replace this with listview when completed
+def ExploreView(request):
+    template_name = "explore.html"
+    return render(request, template_name)
