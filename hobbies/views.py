@@ -51,3 +51,12 @@ class HobbiesAddView(CreateView):
         if form.is_valid():
             hobbies = form.save()
             return redirect('hobbies-detail', slug=hobbies.slug)
+
+def IndexView(request):
+    template_name = "index.html"
+    return render(request, template_name)
+
+# replace this with listview when completed
+def ExploreView(request):
+    template_name = "explore.html"
+    return render(request, template_name)
