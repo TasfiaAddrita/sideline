@@ -38,10 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-<<<<<<< HEAD
-=======
     # 'hobbies.apps.HobbiesConfig',
->>>>>>> connect-frontend-backend
     'hobbies',
     'accounts',
 
@@ -130,7 +127,6 @@ USE_TZ = True
 # sideline app settings
 HOBBY_PAGE_NAME_MAX_LENGTH = 600
 
-<<<<<<< HEAD
 # Where to redirect during authentication
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
@@ -138,10 +134,10 @@ LOGOUT_REDIRECT_URL = "/"
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'customers.backends.InstructorBackend',
-=======
+]
+    
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
->>>>>>> connect-frontend-backend
 ]
