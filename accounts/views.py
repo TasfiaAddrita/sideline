@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.urls import reverse_lazy
+from django.contrib.auth import authenticate, login, logout
 from django.views.generic import CreateView, View
 from .forms import SignUpForm
 from django.shortcuts import render, redirect, reverse
@@ -14,8 +15,18 @@ class SignUpView(CreateView):
 
 class LoginView(View):
 
-    #Render Login view
-    def get(self, request):
-            return render(request, 'login.html', { 'form':  AuthenticationForm })
+    def get(self, request, *args, **kwargs):
+        return render(request, 'login.html', {'form': AuthenticationForm})
+
+    def post(self, request, *args, **kwargs):
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+ 
+        if user is not None:
+            login(request, userobj)
+        else:
+            return render(request, 'login.html', {'form': AuthenticationForm})
+
 
     

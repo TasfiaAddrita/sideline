@@ -20,6 +20,16 @@
                     <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-dark collapse navbar-collapse" id="navcol-1">
+                    {% if request.user.is_authenticated %}
+                    <p>Welcome {{ user.username }} !!!</p> 
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'explore-page' %}">explore</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">pricing</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">locations</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Hello, {{request.user.username}}</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Log Out</a></li>
+                    </ul>
+                    {% else %} 
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'explore-page' %}">explore</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">pricing</a></li>
@@ -27,6 +37,7 @@
                         <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'signup' %}">sign up!</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'login' %}">login!</a></li>
                     </ul>
+                    {% endif %}
                     <button class="btn btn-light" type="button">get sideline</button>
                 </div>
             </div>
