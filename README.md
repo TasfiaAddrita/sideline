@@ -10,6 +10,7 @@ TODO list:
 6. 5 PT [Tasfia] Continue building prototype for landing page 
 # sideline
 
-Link to Separate Github Repository with 2 features working:  
+Link to Separate Github Repository with 2 features working: [https://github.com/kmurata798/sideline-improved]
+
 1. Explore page ==> CRUDing hobbies: Users who created a hobby post can update/delete the post as well.
 2. User Login, register, and logout capablities + User Authentication: Users must be logged in if they want to CRUD a hobby post.
