@@ -31,17 +31,15 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'spd-sideline.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'hobbies.apps.HobbiesConfig',
+    'users.apps.UsersConfig',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # 'hobbies.apps.HobbiesConfig',
-    'hobbies',
-    'accounts',
-
 ]
 
 MIDDLEWARE = [
@@ -61,8 +59,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
-                    os.path.join(BASE_DIR, 'accounts', 'templates'),
-                    os.path.join(BASE_DIR, 'hobbies', 'templates'), ],
+                    # os.path.join(BASE_DIR, 'accounts', 'templates'),
+                    # os.path.join(BASE_DIR, 'hobbies', 'templates'),
+                     ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,21 +128,21 @@ USE_TZ = True
 HOBBY_PAGE_NAME_MAX_LENGTH = 600
 
 # Where to redirect during authentication
-LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/"
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'customers.backends.InstructorBackend',
-]
-
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'hobbies-home'
+LOGIN_URL = 'login'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

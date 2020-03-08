@@ -1,0 +1,19 @@
+{% extends "hobbies/base.html" %}
+
+{% block content %}
+    <h1>Hobbies list!</h1>
+    <a href="{% url 'hobbies-create' %}"><button>Add another hobby to the list!</button></a>
+    {% for hobby in hobbies %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ hobby.author.profile.image.url }}"">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ hobby.author }}</a>
+                    <small class="text-muted">{{ hobby.date_posted|date:"F d, Y" }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'hobbies-detail' hobby.id %}">{{ hobby.title }}</a></h2>
+                <p class="article-content">{{ hobby.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

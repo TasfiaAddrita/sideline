@@ -1,0 +1,146 @@
+{% extends 'hobbies/base.html' %}
+
+{% block content %}
+
+<div class="content container-fluid">
+    <div class="section hero">
+        <div class="row">
+            <!-- hero info -->
+            <div class="col-6 left-panel d-flex flex-column justify-content-center">
+                <!-- header -->
+                <h1>diam vel quam elementum non pulvinar etiam non</h1>
+                <!-- subtitle -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Sapien nec sagittis aliquam.</p>
+                <div class="d-inline-block">
+                    <!-- try for free button -->
+                    <button class="btn btn-dark" type="button">try for free</button>
+                    <!-- find studios button -->
+                    <button class="btn btn-dark" type="button">find studios</button>
+                </div>
+            </div>
+            <!-- img grid -->
+            <div class="col-6 right-panel">
+                <div class="row">
+                    <div class="hero-img-grid col d-flex align-items-start">
+                        <img width="250px"
+                            src="https://cdn.shopify.com/s/files/1/0167/1276/products/AdobeStock_181424051_480x.jpg?v=1571438529">
+                        <img width="343px"
+                            src="https://freshome.com/wp-content/uploads/2017/12/design-music-studio.jpg">
+                        <!-- <img src="https://thisweekinworcester.com/wp-content/uploads/2018/03/comedy.jpg" width="150px"alt="" srcset=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class='section peek-classes'>
+        <div class="row">
+            <div class="section-title col">
+                <h2>try classes nearby</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="classes-grid d-flex justify-content-center">
+                <div class="class-card">
+                    <!-- img -->
+                    <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
+                        alt="">
+                    <!-- class title -->
+                    <h4>sf comedy club</h4>
+                    <!-- ratings -->
+                    <p>1000+ ratings</p>
+                    <!-- location -->
+                    <p>San Francisco</p>
+                </div>
+
+                <div class="class-card">
+                    <!-- img -->
+                    <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
+                        alt="">
+                    <!-- class title -->
+                    <h4>sf comedy club</h4>
+                    <!-- ratings -->
+                    <p>1000+ ratings</p>
+                    <!-- location -->
+                    <p>San Francisco</p>
+                </div>
+
+                <div class="class-card">
+                    <!-- img -->
+                    <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
+                        alt="">
+                    <!-- class title -->
+                    <h4>sf comedy club</h4>
+                    <!-- ratings -->
+                    <p>1000+ ratings</p>
+                    <!-- location -->
+                    <p>San Francisco</p>
+                </div>
+
+                <div class="class-card">
+                    <!-- img -->
+                    <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
+                        alt="">
+                    <!-- class title -->
+                    <h4>sf comedy club</h4>
+                    <!-- ratings -->
+                    <p>1000+ ratings</p>
+                    <!-- location -->
+                    <p>San Francisco</p>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <button class="btn btn-dark" type="button">explore all classes</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section membership-intro">
+        <div class="row">
+            <div class="col-4 offset-2 left-panel d-flex flex-column justify-content-center">
+                <h2>monthly memberships start at $15/month</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et
+                    dolore magna aliqua. Sapien nec sagittis aliquam.</p>
+            </div>
+            <!-- img grid -->
+            <div class="col-4 offset-pull-md-2 right-panel">
+                <!-- <div class="img-grid">
+                        <img src="" alt="">
+                    </div> -->
+                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2018%2F02%2F12171216%2Fwoman-knitting-getty-763267111.jpg&q=85"
+                    width="100%" alt="">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="section quick-signup">
+        <!-- header -->
+        <h3>not ready to start today?</h3>
+        <!-- subtitle -->
+        <p>get an inside look at the classes available in your neighborhood with our city guide</p>
+        <!-- form -->
+        <!-- text input for email address -->
+        <!-- text input for city -->
+        <!-- signup button -->
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <input type="text" class="form-control" placeholder="email address">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <input type="text" class="form-control" placeholder="city name">
+            </div>
+            <button type="submit" class="btn btn-dark mb-2">get your guide</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

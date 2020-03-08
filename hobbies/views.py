@@ -1,62 +1,67 @@
 from django.shortcuts import render
-from django.views.generic.detail import DetailView
-from django.views.generic.list import ListView
-from django.views.generic.edit import UpdateView, CreateView
-from django.urls import reverse, reverse_lazy
-from django.shortcuts import render, redirect
-
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Hobbies
-from .forms import HobbiesForm
+
+
+def home(request):
+    context = {
+        'hobbies': Hobbies.objects.all()
+    }
+    return render(request, 'hobbies/index.html', context)
 
 class HobbiesListView(ListView):
-    """Renders a list of all hobbies"""
     model = Hobbies
-
-    def get(self, request):
-        """ Returns a list of wiki pages. """
-        hobbies = self.get_queryset().all()
-        # published_time = self.get_queryset().all()[0].was_published_recently()
-        return render(request, 'hobbies_list.html', {'hobbies': hobbies})
+    template_name = 'hobbies/list.html'    #<app>/<model>_<viewtype>.html
+    context_object_name = 'hobbies'
+    ordering = ['-date_posted']
 
 class HobbiesDetailView(DetailView):
-    """Renders a specific hobby base on its slug"""
     model = Hobbies
 
-    def get(self, request, slug):
-        """ Returns a specific hobby page by slug """
-        hobbies = self.get_queryset().get(slug__iexact=slug)
-        return render(request, 'hobbies_detail.html', {
-          'hobbies': hobbies
-        })
-
-class HobbiesEditView(UpdateView):
-    """Update a hobby's information"""
+class HobbiesCreateView(LoginRequiredMixin, CreateView):
     model = Hobbies
-    fields = '__all__'
-    template_name = 'edit.html'
+    fields = ['title', 'content']
 
     def form_valid(self, form):
-        hobbies = form.save()
-        return redirect('hobbies-details', slug=hobbies.slug)
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
-class HobbiesAddView(CreateView):
-    """Add new hobby to the list"""
+class HobbiesUpdateView(LoginRequiredMixin,  UserPassesTestMixin, UpdateView):
     model = Hobbies
-    form_class = HobbiesForm
-    template_name = 'hobbies-add.html'
+    fields = ['title', 'content']
 
-    def post(self, request):
-        form = HobbiesForm(request.POST)
-        # form.instance.author = self.request.user
-        if form.is_valid():
-            hobbies = form.save()
-            return redirect('hobbies-detail', slug=hobbies.slug)
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+    
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
 
-def IndexView(request):
-    template_name = "index.html"
-    return render(request, template_name)
+class HobbiesDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Hobbies
+    success_url = '/'
 
-# replace this with listview when completed
-def ExploreView(request):
-    template_name = "explore.html"
-    return render(request, template_name)
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+
+def about(request):
+    return render(request, 'hobbies/about.html', { 'title': 'About'})
+
+def explore(request):
+    return render(request, 'hobbies/explore.html', {'title': 'Explore'})
+
+def get_sideline(request):
+    return render(request, 'hobbies/get_sideline.html', {'title': 'Get Sideline'})
+
+def pricing(request):
+    return render(request, 'hobbies/pricing.html', {'title': 'Sideline Pricing'})
+
+def locations(request):
+    return render(request, 'hobbies/locations.html', {'title': 'locations'})
