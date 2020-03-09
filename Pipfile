@@ -11,6 +11,8 @@ gunicorn = "*"
 whitenoise = "*"
 pillow = "*"
 django-crispy-forms = "*"
+dj-database-url = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
