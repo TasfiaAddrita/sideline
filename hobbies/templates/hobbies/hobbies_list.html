@@ -1,19 +1,22 @@
 {% extends "hobbies/base.html" %}
 {% load static %}
 {% block content %}
-    <h1>Hobbies list!</h1>
-    <a href="{% url 'hobbies-create' %}"><button>Add another hobby to the list!</button></a>
-    {% for hobby in hobbies %}
-        <article class="media content-section">
-            <img class="rounded-circle article-img" src="{{ hobby.author.profile.image.url }}"">
-            <div class="media-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="#">{{ hobby.author }}</a>
-                    <small class="text-muted">{{ hobby.date_posted|date:"F d, Y" }}</small>
+    <h2>your hobbies</h2>
+    <p style="color:gray">hobbies you're currently signed up for</p>
+    <!-- <a href="{% url 'hobbies-create' %}"><button>Add another hobby to the list!</button></a> -->
+    <div class="row hobby">
+        {% for hobby in hobbies %}
+            <div class="card hobby-card">
+                <img class="" src="{{ hobby.author.profile.image.url }}"">
+                <div class="card-body">
+                    <h4><a class="card-title" href="{% url 'hobbies-detail' hobby.id %}">{{ hobby.title }}</a></h4>
+                    <p class="card-text">{{ hobby.content }}</p>
+                    <div class="">
+                        <a class="mr-2" href="#">{{ hobby.author }}</a>
+                        <small class="text-muted">{{ hobby.date_posted|date:"F d, Y" }}</small>
+                    </div>
                 </div>
-                <h2><a class="article-title" href="{% url 'hobbies-detail' hobby.id %}">{{ hobby.title }}</a></h2>
-                <p class="article-content">{{ hobby.content }}</p>
             </div>
-        </article>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock content %}

@@ -10,6 +10,12 @@ def home(request):
     }
     return render(request, 'hobbies/index.html', context)
 
+class HobbiesExploreView(ListView):
+    model = Hobbies
+    template_name = "hobbies/explore.html"
+    context_object_name = "hobbies"
+    ordering = ['-date_posted']
+
 class HobbiesListView(ListView):
     model = Hobbies
     template_name = 'hobbies/list.html'    #<app>/<model>_<viewtype>.html

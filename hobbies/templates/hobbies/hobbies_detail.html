@@ -1,25 +1,54 @@
 {% extends "hobbies/base.html" %}
 
 {% block content %}
-    <h1>Sideline Hobby</h1>
-        <article class="media content-section">
-            <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}"">
-            <div class="media-body">
-                <div class="article-metadata">
-                    <a class="mr-2" href="#">{{ object.author }}</a>
-                    <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+    <!-- <h1>Sideline Hobby</h1> -->
+        <div class="">
+            <!-- <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}""> -->
+            <div class="">
+                <h2 class="">{{ object.title }}</h2>
+                <p class="">{{ object.content }}</p>
+                <div class="">
+                    <a class="mr-2" href="#">hosted by: {{ object.author }}</a>
+                    <small class="text-muted">created at: {{ object.date_posted|date:"F d, Y" }}</small>
                     {% if object.author == user %}
                         <div>
                             <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'hobbies-update' object.id %}">Update</a>
                             <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'hobbies-delete' object.id %}">Delete</a>
                         </div>
-                        
-
-                        {% endif %}
+                    {% endif %}
                 </div>
-                <h2 class="article-title">{{ object.title }}</h2>
-                <p class="article-content">{{ object.content }}</p>
             </div>
-        </article>
+            <br>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Class Name</th>
+                        <th scope="col">Instructor</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>class-name</td>
+                        <td>class-instructor</td>
+                        <td>@class-time</td>
+                        <td>555 Post St. San Francisco, CA</td>
+                    </tr>
+                    <tr>
+                        <td>class-name</td>
+                        <td>class-instructor</td>
+                        <td>@class-time</td>
+                        <td>555 Post St. San Francisco, CA</td>
+                    </tr>
+                    <tr>
+                        <td>class-name</td>
+                        <td>class-instructor</td>
+                        <td>@class-time</td>
+                        <td>555 Post St. San Francisco, CA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     
 {% endblock content %}

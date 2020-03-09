@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="content container-fluid">
+<!-- <div class="content container-fluid"> -->
     <div class="section hero">
         <div class="row">
             <!-- hero info -->
@@ -15,28 +15,42 @@
                     dolore magna aliqua. Sapien nec sagittis aliquam.</p>
                 <div class="d-inline-block">
                     <!-- try for free button -->
-                    <a href="{% url 'free-trial' %}"><button class="btn btn-dark" >Try for Free</button></a>
+                    <a href="{% url 'free-trial' %}"><button class="btn btn-dark" type="button">try for free</button></a>
                     <!-- find studios button -->
-                    <a href="{% url 'locations' %}"><button class="btn btn-dark" >Find studios</button></a>
+                    <a href="{% url 'locations' %}"><button class="btn btn-dark" type="button">find studios</button></a>
                 </div>
             </div>
             <!-- img grid -->
             <div class="col-6 right-panel">
-                <div class="row">
-                    <div class="hero-img-grid col d-flex align-items-start">
-                        <img width="250px"
+                <div class="row-img-grid">
+                    <div class="column-img-grid">
+                        <img
                             src="https://cdn.shopify.com/s/files/1/0167/1276/products/AdobeStock_181424051_480x.jpg?v=1571438529">
-                        <img width="343px"
-                            src="https://freshome.com/wp-content/uploads/2017/12/design-music-studio.jpg">
-                        <!-- <img src="https://thisweekinworcester.com/wp-content/uploads/2018/03/comedy.jpg" width="150px"alt="" srcset=""> -->
+                        <img src="https://images.pexels.com/photos/1047540/pexels-photo-1047540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="">
+                    </div>
+                    <div class="column-img-grid">
+                        <img
+                            src="https://images.pexels.com/photos/1856876/pexels-photo-1856876.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+                        <img src="https://images.pexels.com/photos/982660/pexels-photo-982660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="">
+                    </div>
+                    <div class="column-img-grid">
+                        <img
+                            src="https://images.pexels.com/photos/3600/man-camera-taking-photo-photographer.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                        <img src="https://images.pexels.com/photos/3772488/pexels-photo-3772488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            alt="">
+                        <img src="https://images.pexels.com/photos/2062061/pexels-photo-2062061.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                            alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- </div> -->
+    
     <hr>
-
+    
     <div class='section peek-classes'>
         <div class="row">
             <div class="section-title col">
@@ -50,57 +64,57 @@
                     <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
                         alt="">
                     <!-- class title -->
-                    <h4>sf comedy club</h4>
+                    <h4>singing 101</h4>
                     <!-- ratings -->
-                    <p>1000+ ratings</p>
+                    <p>100+ ratings // </p>
                     <!-- location -->
                     <p>San Francisco</p>
                 </div>
-
+    
                 <div class="class-card">
                     <!-- img -->
-                    <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
+                    <img src="https://images.pexels.com/photos/19680/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                         alt="">
                     <!-- class title -->
-                    <h4>sf comedy club</h4>
+                    <h4>watercolors 101</h4>
                     <!-- ratings -->
-                    <p>1000+ ratings</p>
+                    <p>5000+ ratings // </p>
                     <!-- location -->
                     <p>San Francisco</p>
                 </div>
-
+    
                 <div class="class-card">
                     <!-- img -->
-                    <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
+                    <img src="https://images.pexels.com/photos/1586950/pexels-photo-1586950.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                         alt="">
                     <!-- class title -->
-                    <h4>sf comedy club</h4>
+                    <h4>puzzles 101</h4>
                     <!-- ratings -->
-                    <p>1000+ ratings</p>
+                    <p>750+ ratings // </p>
                     <!-- location -->
                     <p>San Francisco</p>
                 </div>
-
+    
                 <div class="class-card">
                     <!-- img -->
-                    <img src="https://www.musicgrotto.com/wp-content/uploads/2018/05/singer-lounge-microphone-karaoke.jpg.640x427_q100.jpg"
+                    <img src="https://images.pexels.com/photos/2564604/pexels-photo-2564604.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
                         alt="">
                     <!-- class title -->
-                    <h4>sf comedy club</h4>
+                    <h4>sewing 101</h4>
                     <!-- ratings -->
-                    <p>1000+ ratings</p>
+                    <p>1000+ ratings // </p>
                     <!-- location -->
                     <p>San Francisco</p>
                 </div>
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <a href="{% url 'hobbies-list' %}"><button class="btn btn-dark" >Explore all classes</button></a>
+            <a href="{% url 'hobbies-explore' %}"><button class="btn btn-dark" type="button">explore all classes</button></a>
         </div>
     </div>
-
+    
     <hr>
-
+    
     <div class="section membership-intro">
         <div class="row">
             <div class="col-4 offset-2 left-panel d-flex flex-column justify-content-center">
@@ -112,16 +126,16 @@
             <!-- img grid -->
             <div class="col-4 offset-pull-md-2 right-panel">
                 <!-- <div class="img-grid">
-                        <img src="" alt="">
-                    </div> -->
+                            <img src="" alt="">
+                        </div> -->
                 <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2018%2F02%2F12171216%2Fwoman-knitting-getty-763267111.jpg&q=85"
                     width="100%" alt="">
             </div>
         </div>
     </div>
-
+    
     <hr>
-
+    
     <div class="section quick-signup">
         <!-- header -->
         <h3>not ready to start today?</h3>
@@ -141,6 +155,6 @@
             <button type="submit" class="btn btn-dark mb-2">get your guide</button>
         </form>
     </div>
-</div>
+<!-- </div> -->
 
 {% endblock %}

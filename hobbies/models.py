@@ -6,6 +6,7 @@ from django.urls import reverse
 class Hobbies(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
+    img_url = models.URLField(max_length=1000)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
 

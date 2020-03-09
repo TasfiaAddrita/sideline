@@ -4,54 +4,32 @@
 
 {% load static %}
 
-<div class="full-view container-fluid">
-    <div class="pt-5 row">
+<div class="full-view">
+    <h2>explore</h2>
+    <p style="color:gray">check out classes that are offered around your area!</p>
+    <div class="explore-content pt-3 row">
+
         <div class="hobby-list col-7">
-            <!-- List of Classes -->
-            <!-- <input id="search-bar" type="text" placeholder="Search..."> -->
             <ul class="list-group">
-                <!-- Individual class -->
-                <li class="list-group-item">
-                    <!-- <img class="classes-image" src="assets/yoga.jpg"> -->
-                    <img class="classes-image" src="{% static 'assets/yoga.jpg' %}">
-                    <h4>Yoga Studio</h4>
-                    <p>This is a yoga studio</p>
-                </li>
-
-                <li class="list-group-item">
-                    <!-- <img class="classes-image" src="assets/yoga.jpg"> -->
-                    <img class="classes-image" src="{% static 'assets/yoga.jpg' %}">
-                    <h4>Yoga Studio</h4>
-                    <p>This is a yoga studio</p>
-                </li>
-
-                <li class="list-group-item">
-                    <!-- <img class="classes-image" src="assets/yoga.jpg"> -->
-                    <img class="classes-image" src="{% static 'assets/yoga.jpg' %}">
-                    <h4>Yoga Studio</h4>
-                    <p>This is a yoga studio</p>
-                </li>
-
-                <li class="list-group-item">
-                    <!-- <img class="classes-image" src="assets/yoga.jpg"> -->
-                    <img class="classes-image" src="{% static 'assets/yoga.jpg' %}">
-                    <h4>Yoga Studio</h4>
-                    <p>This is a yoga studio</p>
-                </li>
-
-                <li class="list-group-item">
-                    <!-- <img class="classes-image" src="assets/yoga.jpg"> -->
-                    <img class="classes-image" src="{% static 'assets/yoga.jpg' %}">
-                    <h4>Yoga Studio</h4>
-                    <p>This is a yoga studio</p>
-                </li>
-
-                <li class="list-group-item">
-                    <!-- <img class="classes-image" src="assets/yoga.jpg"> -->
-                    <img class="classes-image" src="{% static 'assets/yoga.jpg' %}">
-                    <h4>Yoga Studio</h4>
-                    <p>This is a yoga studio</p>
-                </li>
+                {% for hobby in hobbies %}
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="classes-image-2" src="{{ hobby.img_url }}">
+                            </div>
+                            <div class="col-8">
+                                <h4>{{ hobby.title }}</h4>
+                                <p>{{ hobby.content }}</p>
+                                <button class="btn btn-dark btn-sm">add to my hobbies</button>
+                            </div>
+                        </div>
+                        <!-- <img class="classes-image" src="{{ hobby.img_url }}"> -->
+                        <!-- <img class="classes-image" src="{% static 'assets/yoga.jpg' %}"> -->
+                        <!-- <h4>{{ hobby.title }}</h4>
+                        <p>{{ hobby.content }}</p>
+                        <button class="btn btn-dark btn-sm">add to my hobbies</button> -->
+                    </li>
+                {% endfor %}
             </ul>
         </div>
 
