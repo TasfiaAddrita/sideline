@@ -12,8 +12,8 @@
                     <small class="text-muted">created at: {{ object.date_posted|date:"F d, Y" }}</small>
                     {% if object.author == user %}
                         <div>
-                            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'hobbies-update' object.id %}">Update</a>
-                            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'hobbies-delete' object.id %}">Delete</a>
+                            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'hobbies-update' object.id %">Update</a>
+                            <a class="btn btn-danger btn-sm mt-1 mb-1" href="#">Delete</a>
                         </div>
                     {% endif %}
                 </div>

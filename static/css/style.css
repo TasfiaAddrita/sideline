@@ -131,6 +131,15 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 45px;
 } */
 
+a {
+    color: #5f6db7;
+}
+
+a:hover {
+    color: #5f6db7;
+    text-decoration: none;
+}
+
 .full-view {
     /* height: 100vh; */
 }

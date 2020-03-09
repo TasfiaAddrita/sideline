@@ -7,8 +7,9 @@
 <div class="full-view">
     <h2>explore</h2>
     <p style="color:gray">check out classes that are offered around your area!</p>
+    <!-- <h5>don't see a hobby you're interested in?</h5> -->
+    <!-- <a href="{% url 'hobbies-create' %}"><button class="btn btn-dark">create a hobby!</button></a> -->
     <div class="explore-content pt-3 row">
-
         <div class="hobby-list col-7">
             <ul class="list-group">
                 {% for hobby in hobbies %}
@@ -18,9 +19,9 @@
                                 <img class="classes-image-2" src="{{ hobby.img_url }}">
                             </div>
                             <div class="col-8">
-                                <h4>{{ hobby.title }}</h4>
+                                <a href="{% url 'hobbies-detail' hobby.id %}"><h4>{{ hobby.title }}</h4></a>
                                 <p>{{ hobby.content }}</p>
-                                <button class="btn btn-dark btn-sm">add to my hobbies</button>
+                                <!-- <button class="btn btn-dark btn-sm">add to my hobbies</button> -->
                             </div>
                         </div>
                         <!-- <img class="classes-image" src="{{ hobby.img_url }}"> -->
@@ -35,7 +36,11 @@
 
         <!-- Map Image -->
         <!-- <div class="col-6 full-width-image"><img src="assets/map-image.png"></div> -->
-        <div class="col-5 full-width-image"><img src="{% static 'assets/map-image.png' %}"></div>
+        <div class="col-5 full-width-image">
+            <img src="{% static 'assets/map-image.png' %}">
+            <h5 style="margin-top: 10px;">don't see a hobby you're interested in?</h5>
+            <a href="{% url 'hobbies-create' %}"><button class="btn btn-dark">create a hobby!</button></a>
+        </div>
     </div>
 </div>
 

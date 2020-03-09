@@ -33,7 +33,7 @@ class HobbiesCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-class HobbiesUpdateView(LoginRequiredMixin,  UserPassesTestMixin, UpdateView):
+class HobbiesUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Hobbies
     fields = ['title', 'content']
 
@@ -58,19 +58,19 @@ class HobbiesDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return False
 
 def about(request):
-    return render(request, 'hobbies/about.html', { 'title': 'About'})
+    return render(request, 'hobbies/misc/about.html', { 'title': 'About'})
 
 def explore(request):
-    return render(request, 'hobbies/explore.html', {'title': 'Explore'})
+    return render(request, 'hobbies/misc/explore.html', {'title': 'Explore'})
 
 def get_sideline(request):
-    return render(request, 'hobbies/get_sideline.html', {'title': 'Get Sideline'})
+    return render(request, 'hobbies/misc/get_sideline.html', {'title': 'Get Sideline'})
 
 def pricing(request):
-    return render(request, 'hobbies/pricing.html', {'title': 'Sideline Pricing'})
+    return render(request, 'hobbies/misc/pricing.html', {'title': 'Sideline Pricing'})
 
 def locations(request):
-    return render(request, 'hobbies/locations.html', {'title': 'Locations'})
+    return render(request, 'hobbies/misc/locations.html', {'title': 'Locations'})
 
 def free_trial(request):
-    return render(request, 'hobbies/free_trial.html', {'title': 'Get a Free Trial!'})
+    return render(request, 'hobbies/misc/free_trial.html', {'title': 'Get a Free Trial!'})

@@ -2,21 +2,23 @@
 {% load static %}
 {% block content %}
     <h2>your hobbies</h2>
-    <p style="color:gray">hobbies you're currently signed up for</p>
+    <p style="color:gray">hobbies you're currently running</p>
     <!-- <a href="{% url 'hobbies-create' %}"><button>Add another hobby to the list!</button></a> -->
     <div class="row hobby">
         {% for hobby in hobbies %}
-            <div class="card hobby-card">
-                <img class="" src="{{ hobby.author.profile.image.url }}"">
-                <div class="card-body">
-                    <h4><a class="card-title" href="{% url 'hobbies-detail' hobby.id %}">{{ hobby.title }}</a></h4>
-                    <p class="card-text">{{ hobby.content }}</p>
-                    <div class="">
-                        <a class="mr-2" href="#">{{ hobby.author }}</a>
-                        <small class="text-muted">{{ hobby.date_posted|date:"F d, Y" }}</small>
+            {% if hobby.author == user %}
+                <div class="card hobby-card">
+                    <img class="" src="{{ hobby.author.profile.image.url }}"">
+                    <div class="card-body">
+                        <h4><a class="card-title" href="{% url 'hobbies-detail' hobby.id %}">{{ hobby.title }}</a></h4>
+                        <p class="card-text">{{ hobby.content }}</p>
+                        <div class="">
+                            <a class="mr-2" href="#">{{ hobby.author }}</a>
+                            <small class="text-muted">{{ hobby.date_posted|date:"F d, Y" }}</small>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock content %}
