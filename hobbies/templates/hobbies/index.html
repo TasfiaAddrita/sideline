@@ -15,9 +15,9 @@
                     dolore magna aliqua. Sapien nec sagittis aliquam.</p>
                 <div class="d-inline-block">
                     <!-- try for free button -->
-                    <button class="btn btn-dark" type="button">try for free</button>
+                    <a href="{% url 'free-trial' %}"><button class="btn btn-dark" >Try for Free</button></a>
                     <!-- find studios button -->
-                    <button class="btn btn-dark" type="button">find studios</button>
+                    <a href="{% url 'locations' %}"><button class="btn btn-dark" >Find studios</button></a>
                 </div>
             </div>
             <!-- img grid -->
@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <button class="btn btn-dark" type="button">explore all classes</button>
+            <a href="{% url 'hobbies-list' %}"><button class="btn btn-dark" >Explore all classes</button></a>
         </div>
     </div>
 

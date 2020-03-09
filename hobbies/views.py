@@ -64,4 +64,7 @@ def pricing(request):
     return render(request, 'hobbies/pricing.html', {'title': 'Sideline Pricing'})
 
 def locations(request):
-    return render(request, 'hobbies/locations.html', {'title': 'locations'})
+    return render(request, 'hobbies/locations.html', {'title': 'Locations'})
+
+def free_trial(request):
+    return render(request, 'hobbies/free_trial.html', {'title': 'Get a Free Trial!'})

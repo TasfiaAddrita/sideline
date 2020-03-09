@@ -58,10 +58,9 @@ ROOT_URLCONF = 'sideline.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
-                    # os.path.join(BASE_DIR, 'accounts', 'templates'),
-                    # os.path.join(BASE_DIR, 'hobbies', 'templates'),
-                     ],
+        'DIRS': [   os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
+                    os.path.join(BASE_DIR, 'users', 'templates'),
+                    os.path.join(BASE_DIR, 'hobbies', 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
