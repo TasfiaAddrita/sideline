@@ -18,7 +18,7 @@ All dependencies are listed in the Pipfile in the repository.
 
 ### Installing
 
-Clone this repository  (Don't include the $. This symbol indicates that you need to write this command in the commandline in this repository):
+Clone this repository   (Don't include the $. This symbol indicates that you need to write this command in the commandline in this repository):
 
 ```
 $ git clone https://github.com/TasfiaAddrita/sideline.git
