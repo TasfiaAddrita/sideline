@@ -8,16 +8,6 @@ https://spd-sideline.herokuapp.com
 Subscription based website allowing users to sign up for specific hobby classes/groups.
 "ClassPass for hobbies!"
 
-# GameTrace Website Link (Heroku app):  https://gametrace.herokuapp.com
-![GameTrace image](/images/GameTrace-Thumbnail.jpg)
-
-### Need to make changes to database to postgre ==> heroku keeps reseting database
-
-
-## Description
-
-GameTrace gives users the ability to keep track of his/her in-game achievements, trophies, gameplay, etc when they are away from home base (their preferred gaming system). The current state of the project is an MVP, in which additional changes are being planned for implementation.
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [Deployment](#deployment) for notes on how to deploy the project on a live system.
@@ -28,7 +18,7 @@ All dependencies are listed in the Pipfile in the repository.
 
 ### Installing
 
-Clone this repository (Don't include the $. This symbol indicates that you need to write this command in the commandline in this repository):
+Clone this repository  (Don't include the $. This symbol indicates that you need to write this command in the commandline in this repository):
 
 ```
 $ git clone https://github.com/TasfiaAddrita/sideline.git
